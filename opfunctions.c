@@ -10,13 +10,13 @@ stack_t *new_nodo = NULL;
 
 if (!stack)
 {
-fprintf(stderr, "L%d: unknown stack\n", lnum);
+fprintf(stderr, "L%d: unknown stack\n", line_number);
 	exit(EXIT_FAILURE);
 }
 new_nodo = malloc(sizeof(size_t));
 if (new_nodo == NULL)
 {
-fprintf(stderr, "Error: malloc failed\n"), FrStack(stack, lnum);
+fprintf(stderr, "Error: malloc failed\n"/*), FrStack(stack, line_number*/);
 	exit(EXIT_FAILURE);
 }
 
@@ -43,7 +43,7 @@ stack_t *printstack;
 
 if (!stack)
 {
-fprintf(stderr, "L%d: invalid stack\n", lnum);
+fprintf(stderr, "L%d: invalid stack\n", line_number);
 	exit(EXIT_FAILURE);
 }
 
@@ -69,7 +69,7 @@ int sum;
 
 if (!stack || (*stack)->next == NULL)
 {
-fprintf(stderr, "L%u: can't add, stack too short\n", lnum);
+fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 }
 
@@ -90,7 +90,7 @@ stack_t *aux = *stack;
 
 if (!stack)
 {
-fprintf(stderr, "L%u: can't pop an empty stack\n", lnum);
+fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 	exit(EXIT_FAILURE);
 }
 

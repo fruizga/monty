@@ -26,7 +26,7 @@ return;
 }
 }
 
-fprintf(stderr, "L%u: unknown instruction %s\n", lnum, tkn);
+fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
 /*liberar stack*/
 exit(EXIT_FAILURE);
 }
