@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define UNUSED(x) (void)(x)
 
 #include <unistd.h>
 #include <string.h>
@@ -68,6 +69,18 @@ void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int lnum);
+void mul(stack_t **stack, unsigned int line_number);
+void fdiv(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
+void fpstr(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+
+/*free*/
+void freestack(stack_t **stack, unsigned int line_number);
 
 
 

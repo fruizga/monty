@@ -14,6 +14,14 @@ instruction_t hugo_norzobia[] = {
 {"pall", pall},
 {"add", add},
 {"pop", pop},
+{"pint", pint},
+{"sub", sub},
+{"mul", mul},
+{"div", fdiv},
+{"mod", mod},
+{"swap", swap},
+{"pchar", pchar},
+{"pstr", fpstr},
 {NULL, NULL}
 };
 
@@ -27,6 +35,6 @@ return;
 }
 
 fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
-/*liberar stack*/
+freestack(stack, line_number);
 exit(EXIT_FAILURE);
 }

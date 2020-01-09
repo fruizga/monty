@@ -15,15 +15,15 @@ stack_t *stack = NULL;
 
 if (ac != 2)
 {
- fprintf(stderr, "USAGE: monty file\n");
- exit(EXIT_FAILURE);
+fprintf(stderr, "USAGE: monty file\n");
+exit(EXIT_FAILURE);
 }
 
 fd = fopen(av[1], "r");
 if (!fd)
 {
- fprintf(stderr, "Error: Can't open file %s\n", av[1]);
- exit(EXIT_FAILURE);
+fprintf(stderr, "Error: Can't open file %s\n", av[1]);
+exit(EXIT_FAILURE);
 }
 
 for (line_number = 1; getline(&buff, &i, fd) != -1; line_number++)
